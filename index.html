@@ -177,11 +177,6 @@
       padding-bottom: 0.7rem;
     }
 
-    .accordion-content.open {
-      /* max-height wird per JS gesetzt */
-    }
-
-    /* Kleines Trennline oben im Content */
     .accordion-content-inner .item:first-child {
       margin-top: 0.7rem;
     }
@@ -196,10 +191,19 @@
     </p>
   </header>
 
+  <!-- WICHTIGER HINWEIS -->
   <p class="rules">
     <strong>Wichtig:</strong> Bitte bei allen Wünschen ausschließlich den angegebenen Link benutzen.
     Besonders bei Drohnen-Akkus, ND-Filtern und Zubehör ist es wichtig, dass es genau das richtige
     Modell ist. Bitte keine ähnlichen Produkte oder Alternativen – dann passt alles sicher. ❤️
+  </p>
+
+  <!-- INFO AN ELTERN -->
+  <p class="rules" style="background:#0f1a2e; border-color:#243454; margin-top:0.5rem;">
+    <strong>Kleine Info an euch 😊:</strong><br>
+    Mir ist bewusst, dass manche Sachen auf der Liste ziemlich teuer sind.  
+    Ich erwarte sie natürlich nicht und freue mich genauso über alles, von dem ihr denkt,  
+    dass es sich lohnt und gut zu mir passt. ❤️
   </p>
 
   <main>
@@ -377,68 +381,3 @@
               Hilft, die Flugbahn präziser einzuschätzen & kreative Aufnahmen zu machen.  
               Bitte genau dieses Modell verwenden.
             </div>
-            <div class="item-link">
-              <a href="https://share.google/QQhYGK2bjUOEyIFz3" target="_blank">
-                DJI Goggles 3 (DJI Store)
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SONSTIGES -->
-    <h2 class="section-title">Sonstige Wünsche 🎁</h2>
-
-    <div class="item">
-      <div class="item-title">Gutschein (z. B. Amazon / MediaMarkt)</div>
-      <div class="item-note">
-        Damit kann ich mir später noch Zubehör oder Technik holen.
-      </div>
-      <div class="item-link">
-        <a href="#" target="_blank">Optionaler Gutschein-Link</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title">Eigene Idee von euch 😊</div>
-      <div class="item-note">
-        Kleine Technik-Gadgets passen immer zu mir 😄
-      </div>
-    </div>
-
-  </main>
-
-  <footer>
-    Diese Seite habe ich selbst gebaut,<br>
-    damit ihr einen guten Überblick habt ❤️
-  </footer>
-
-  <script>
-    // Accordion-Logik
-    document.querySelectorAll('.accordion-group').forEach(function(group) {
-      const header = group.querySelector('.accordion-header');
-      const button = group.querySelector('.accordion-button');
-      const content = group.querySelector('.accordion-content');
-
-      // Startzustand: offen
-      content.style.maxHeight = content.scrollHeight + 'px';
-      content.classList.add('open');
-      button.setAttribute('aria-expanded', 'true');
-
-      header.addEventListener('click', function() {
-        const isOpen = content.classList.contains('open');
-        if (isOpen) {
-          content.classList.remove('open');
-          content.style.maxHeight = 0;
-          button.setAttribute('aria-expanded', 'false');
-        } else {
-          content.classList.add('open');
-          content.style.maxHeight = content.scrollHeight + 'px';
-          button.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-  </script>
-</body>
-</html>
