@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Niklas Weihnachts-Wunschliste</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     body {
       margin: 0;
@@ -11,56 +12,107 @@
       background: #0f172a;
       color: #e5e7eb;
     }
+
     header {
       text-align: center;
       padding: 2rem 1rem 1rem;
     }
+
     h1 {
       margin: 0;
       font-size: 1.9rem;
     }
+
     p.subtitle {
       margin: 0.5rem 0 0;
       color: #9ca3af;
       font-size: 0.95rem;
     }
+
+    p.rules {
+      text-align: center;
+      max-width: 700px;
+      margin: 1rem auto;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      background: #1e293b;
+      padding: 0.8rem 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid #334155;
+    }
+
     main {
       max-width: 800px;
       margin: 1rem auto 2rem;
       padding: 0 1rem 2rem;
     }
+
     .section-title {
       margin: 1.5rem 0 0.5rem;
       font-size: 1.2rem;
       border-bottom: 1px solid #1f2937;
       padding-bottom: 0.25rem;
     }
+
+    /* --- ITEM CARD --- */
     .item {
       background: #111827;
       border-radius: 0.75rem;
       padding: 0.9rem 1rem;
       margin-bottom: 0.7rem;
       box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      animation: fadeInSmooth 0.45s ease forwards;
+      transition: transform 0.2s ease, box-shadow 0.25s ease;
     }
+
+    /* Hover Effekt + Glow */
+    .item:hover {
+      transform: translateY(-4px);
+      box-shadow: 
+        0 12px 28px rgba(0,0,0,0.55),
+        0 0 12px rgba(56,189,248,0.35);
+    }
+
     .item-title {
       font-weight: 600;
       font-size: 1rem;
       margin-bottom: 0.2rem;
     }
+
     .item-note {
       font-size: 0.87rem;
       color: #9ca3af;
       margin-bottom: 0.25rem;
     }
+
+    /* Link Animation */
     .item-link a {
       font-size: 0.85rem;
       text-decoration: none;
       color: #38bdf8;
       word-break: break-all;
+      display: inline-block;
+      transition: transform 0.15s ease, color 0.15s ease;
     }
+
     .item-link a:hover {
-      text-decoration: underline;
+      transform: scale(1.06);
+      color: #5fd4ff;
     }
+
+    /* Fade-in Animation */
+    @keyframes fadeInSmooth {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     footer {
       text-align: center;
       font-size: 0.8rem;
@@ -69,6 +121,7 @@
     }
   </style>
 </head>
+
 <body>
   <header>
     <h1>Niklas Weihnachts-Wunschliste 🎄</h1>
@@ -77,21 +130,29 @@
     </p>
   </header>
 
+  <p class="rules">
+    <strong>Wichtig:</strong> Bitte bei allen Wünschen ausschließlich den angegebenen Link benutzen.
+    Besonders bei Drohnen-Akkus, ND-Filtern und Zubehör ist es wichtig, dass es genau das richtige
+    Modell ist. Bitte keine ähnlichen Produkte oder Alternativen – dann passt alles sicher. ❤️
+  </p>
+
   <main>
+
     <!-- HANDY -->
     <h2 class="section-title">Für mein Handy 📱</h2>
 
-Das Handy habe ich mir selbst gekauft und mir selbst geleistet.
-<br>
-Ihr müsst mir nichts dazu geben
+    <p class="item-note" style="margin-bottom: 1rem;">
+      Mein Handy (S25 Ultra) habe ich mir selbst gekauft und mir selbst geleistet –
+      ihr müsst mir dazu nichts schenken 😊<br>
+      Falls ihr trotzdem etwas Kleines schenken möchtet:
+    </p>
 
     <div class="item">
       <div class="item-title">Panzerglas & Hülle für S25 Ultra</div>
       <div class="item-note">
-        Am liebsten sehr stoßfest, damit das Handy lange heil bleibt.
+        Robust & stoßfest, damit das Handy lange heil bleibt.
       </div>
       <div class="item-link">
-        <!-- Hier kannst du später den richtigen Link einfügen -->
         <a href="#" target="_blank">Link zum Produkt (Platzhalter)</a>
       </div>
     </div>
@@ -99,7 +160,7 @@ Ihr müsst mir nichts dazu geben
     <div class="item">
       <div class="item-title">USB-C Schnellladegerät / Kabel</div>
       <div class="item-note">
-        Ein hochwertiges Ladegerät mit guter Ladeleistung für unterwegs.
+        Ein hochwertiges Ladegerät oder Kabel wäre praktisch für unterwegs.
       </div>
       <div class="item-link">
         <a href="#" target="_blank">Link zum Produkt (Platzhalter)</a>
@@ -112,54 +173,97 @@ Ihr müsst mir nichts dazu geben
     <div class="item">
       <div class="item-title">ND-Filter Set für meine Drohne</div>
       <div class="item-note">
-        Damit die Aufnahmen bei Sonne noch besser aussehen.
+        Bitte genau diesen Link verwenden – perfekte Passform & Qualität.
       </div>
-      
       <div class="item-link">
-  <a href="https://amzn.to/4nqQKn8" target="_blank" rel="noopener noreferrer">
-    Amazon-Link zum ND-Filter
-  </a>
-</div>
+        <a href="https://amzn.to/4nqQKn8" target="_blank">Zum ND-Filter Set (Amazon)</a>
       </div>
     </div>
 
     <div class="item">
-  <div class="item-title">Extra Akku – Intelligent Flight Battery Plus</div>
-  <div class="item-note">
-    Längere Flugzeit (bis zu 50 Minuten statt 30 Minuten).
-  </div>
-  <div class="item-link">
-    <a href="https://drohnen-shop.de/products/intelligent-flight-battery-plus-fur-dji-mini-3-4-pro-langere-flugzeit" 
-       target="_blank" 
-       rel="noopener noreferrer">
-      Zum Produkt im Drohnen-Shop
-    </a>
-  </div>
-</div>
+      <div class="item-title">Standardakku – Intelligent Flight Battery</div>
+      <div class="item-note">
+        Originaler DJI Akku, vollständig kompatibel & zuverlässig.  
+        Funktioniert problemlos – der Plus-Akku ist aber leistungsstärker.
+      </div>
+      <div class="item-link">
+        <a href="https://amzn.to/4pMR6WQ" target="_blank">Zum Standardakku (Amazon)</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Plus-Akku – Intelligent Flight Battery Plus</div>
+      <div class="item-note">
+        Deutlich mehr Flugzeit: ca. **50 Minuten statt ~30 Minuten**.  
+        Perfekt für längere Aufnahmen & weniger Akku-Wechsel.  
+        Bitte nur diesen Link verwenden.
+      </div>
+      <div class="item-link">
+        <a href="https://drohnen-shop.de/products/intelligent-flight-battery-plus-fur-dji-mini-3-4-pro-langere-flugzeit" target="_blank">
+          Zum Plus-Akku (Drohnen-Shop)
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Schutzfolie für DJI RC 2 Fernsteuerung</div>
+      <div class="item-note">
+        Schützt das Display vor Kratzern & Fingerabdrücken.
+      </div>
+      <div class="item-link">
+        <a href="https://amzn.to/46XOSMM" target="_blank">Zur RC 2 Schutzfolie (Amazon)</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">DJI Goggles 3 – FPV-Brille</div>
+      <div class="item-note">
+        Für ein immersives Fluggefühl – man sieht direkt durch die Drohne.  
+        Bitte genau dieses Modell verwenden.
+      </div>
+      <div class="item-link">
+        <a href="https://share.google/QQhYGK2bjUOEyIFz3" target="_blank">
+          DJI Goggles 3 (DJI Store)
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">Sonnenschutz für DJI RC 2 Fernsteuerung</div>
+      <div class="item-note">
+        Erleichtert Sicht auf das Display bei starkem Sonnenlicht.
+      </div>
+      <div class="item-link">
+        <a href="https://amzn.to/4nSb1Su" target="_blank">Zum RC 2 Sonnenschutz (Amazon)</a>
+      </div>
+    </div>
 
     <!-- SONSTIGES -->
     <h2 class="section-title">Sonstige Wünsche 🎁</h2>
 
     <div class="item">
-      <div class="item-title">Gutschein (z.&nbsp;B. Amazon / MediaMarkt)</div>
+      <div class="item-title">Gutschein (z. B. Amazon / MediaMarkt)</div>
       <div class="item-note">
-        Dann kann ich mir später noch Technik oder Zubehör aussuchen.
+        Damit kann ich mir später noch Zubehör oder Technik holen.
       </div>
       <div class="item-link">
-        <a href="#" target="_blank">Optionaler Link zu einem Gutschein</a>
+        <a href="#" target="_blank">Optionaler Gutschein-Link</a>
       </div>
     </div>
 
     <div class="item">
       <div class="item-title">Eigene Idee von euch 😊</div>
       <div class="item-note">
-        Wenn ihr etwas seht, das zu Drohne / Handy / Technik passt, freue ich mich auch darüber!
+        Kleine Technik-Gadgets passen immer zu mir 😄
       </div>
     </div>
+
   </main>
 
   <footer>
-    Diese Seite habe ich selbst gebaut,<br> damit ihr einen Überblick habt 
+    Diese Seite habe ich selbst gebaut,<br>
+    damit ihr einen guten Überblick habt ❤️
   </footer>
+
 </body>
 </html>
