@@ -69,7 +69,7 @@
     /* Hover Effekt + Glow */
     .item:hover {
       transform: translateY(-4px);
-      box-shadow: 
+      box-shadow:
         0 12px 28px rgba(0,0,0,0.55),
         0 0 12px rgba(56,189,248,0.35);
     }
@@ -119,6 +119,72 @@
       color: #6b7280;
       padding-bottom: 1rem;
     }
+
+    /* ---------- ACCORDION STYLES ---------- */
+
+    .accordion-group {
+      margin: 0.6rem 0 1rem;
+      border-radius: 0.75rem;
+      border: 1px solid #1f2937;
+      background: #020617;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      padding: 0.6rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .accordion-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .accordion-button {
+      background: none;
+      border: none;
+      color: #9ca3af;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      cursor: pointer;
+      padding: 0;
+    }
+
+    .accordion-icon {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+
+    .accordion-button[aria-expanded="true"] .accordion-icon {
+      transform: rotate(90deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+      padding: 0 0.9rem;
+    }
+
+    .accordion-content-inner {
+      padding-bottom: 0.7rem;
+    }
+
+    .accordion-content.open {
+      /* max-height wird per JS gesetzt */
+    }
+
+    /* Kleines Trennline oben im Content */
+    .accordion-content-inner .item:first-child {
+      margin-top: 0.7rem;
+    }
   </style>
 </head>
 
@@ -142,10 +208,9 @@
     <h2 class="section-title">Für mein Handy 📱</h2>
 
     <p class="item-note" style="margin-bottom: 1rem;">
-      Mein Handy (S25 Ultra) habe ich mir selbst gekauft und mir selbst geleistet.
-Ihr braucht mir kein Geld dazugeben.
-<br>
-     
+      Mein Handy (S25 Ultra) habe ich mir selbst gekauft und mir selbst geleistet –
+      ihr müsst mir dazu nichts schenken 😊<br>
+      Falls ihr trotzdem etwas Kleines schenken möchtet:
     </p>
 
     <div class="item">
@@ -168,74 +233,157 @@ Ihr braucht mir kein Geld dazugeben.
       </div>
     </div>
 
-    <!-- DROHNE -->
+    <!-- DJI MINI 4 PRO -->
     <h2 class="section-title">Für meine DJI Mini 4 Pro 🚁</h2>
 
-    <div class="item">
-      <div class="item-title">ND-Filter Set für meine Drohne</div>
-      <div class="item-note">
-        Bitte genau diesen Link verwenden – perfekte Passform & Qualität.
+    <!-- ACCORDION: Filter & Bild -->
+    <div class="accordion-group">
+      <div class="accordion-header">
+        <div class="accordion-title">Filter & Bildqualität</div>
+        <button class="accordion-button" aria-expanded="true">
+          <span>auf/zu</span>
+          <span class="accordion-icon">▶</span>
+        </button>
       </div>
-      <div class="item-link">
-        <a href="https://amzn.to/4nqQKn8" target="_blank">Zum ND-Filter Set (Amazon)</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title">Standardakku – Intelligent Flight Battery</div>
-      <div class="item-note">
-        Originaler DJI Akku, vollständig kompatibel & zuverlässig.  
-        Funktioniert problemlos – der Plus-Akku ist aber leistungsstärker.
-      </div>
-      <div class="item-link">
-        <a href="https://amzn.to/4pMR6WQ" target="_blank">Zum Standardakku (Amazon)</a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title">Plus-Akku – Intelligent Flight Battery Plus</div>
-      <div class="item-note">
-        Deutlich mehr Flugzeit: ca. **50 Minuten statt ~30 Minuten**.  
-        Perfekt für längere Aufnahmen & weniger Akku-Wechsel.  
-        Bitte nur diesen Link verwenden.
-      </div>
-      <div class="item-link">
-        <a href="https://drohnen-shop.de/products/intelligent-flight-battery-plus-fur-dji-mini-3-4-pro-langere-flugzeit" target="_blank">
-          Zum Plus-Akku (Drohnen-Shop)
-        </a>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <div class="item">
+            <div class="item-title">ND-Filter Set für meine Drohne</div>
+            <div class="item-note">
+              Bitte genau diesen Link verwenden – perfekte Passform & Qualität für die Mini 4 Pro.
+            </div>
+            <div class="item-link">
+              <a href="https://amzn.to/4nqQKn8" target="_blank">
+                Zum ND-Filter Set (Amazon)
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="item">
-      <div class="item-title">Schutzfolie für DJI RC 2 Fernsteuerung</div>
-      <div class="item-note">
-        Schützt das Display vor Kratzern & Fingerabdrücken.
+    <!-- ACCORDION: Akkus & Laden -->
+    <div class="accordion-group">
+      <div class="accordion-header">
+        <div class="accordion-title">Akkus & Laden</div>
+        <button class="accordion-button" aria-expanded="true">
+          <span>auf/zu</span>
+          <span class="accordion-icon">▶</span>
+        </button>
       </div>
-      <div class="item-link">
-        <a href="https://amzn.to/46XOSMM" target="_blank">Zur RC 2 Schutzfolie (Amazon)</a>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <div class="item">
+            <div class="item-title">Standardakku – Intelligent Flight Battery</div>
+            <div class="item-note">
+              Originaler DJI Akku, vollständig kompatibel & zuverlässig.  
+              Funktioniert problemlos – der Plus-Akku ist aber leistungsstärker.
+            </div>
+            <div class="item-link">
+              <a href="https://amzn.to/4pMR6WQ" target="_blank">
+                Zum Standardakku (Amazon)
+              </a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">Plus-Akku – Intelligent Flight Battery Plus</div>
+            <div class="item-note">
+              Deutlich mehr Flugzeit: ca. 50 Minuten statt ~30 Minuten.  
+              Perfekt für längere Aufnahmen & weniger Akku-Wechsel.  
+              Bitte nur diesen Link verwenden.
+            </div>
+            <div class="item-link">
+              <a href="https://drohnen-shop.de/products/intelligent-flight-battery-plus-fur-dji-mini-3-4-pro-langere-flugzeit"
+                 target="_blank">
+                Zum Plus-Akku (Drohnen-Shop)
+              </a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">DJI Two-Way Charging Hub (offiziell)</div>
+            <div class="item-note">
+              Offizielle DJI Ladestation für bis zu 3 Akkus.  
+              100% kompatibel mit der DJI Mini 4 Pro, lädt Akkus nacheinander
+              und kann auch als Powerbank genutzt werden.  
+              Bitte nur diesen Link verwenden – Originalprodukt.
+            </div>
+            <div class="item-link">
+              <a href="https://store.dji.com/de/product/dji-mini-3-pro-two-way-charging-hub?vid=114201"
+                 target="_blank" rel="noopener noreferrer">
+                Offizieller DJI Charging Hub (DJI Store)
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="item">
-      <div class="item-title">DJI Goggles 3 – FPV-Brille</div>
-      <div class="item-note">
-        Für ein immersives Fluggefühl – man sieht direkt durch die Drohne.  
-        Bitte genau dieses Modell verwenden.
+    <!-- ACCORDION: Fernsteuerung & Zubehör -->
+    <div class="accordion-group">
+      <div class="accordion-header">
+        <div class="accordion-title">Fernsteuerung & Zubehör</div>
+        <button class="accordion-button" aria-expanded="true">
+          <span>auf/zu</span>
+          <span class="accordion-icon">▶</span>
+        </button>
       </div>
-      <div class="item-link">
-        <a href="https://share.google/QQhYGK2bjUOEyIFz3" target="_blank">
-          DJI Goggles 3 (DJI Store)
-        </a>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <div class="item">
+            <div class="item-title">Schutzfolie für DJI RC 2 Fernsteuerung</div>
+            <div class="item-note">
+              Schützt das Display der Fernsteuerung vor Kratzern & Fingerabdrücken.
+            </div>
+            <div class="item-link">
+              <a href="https://amzn.to/46XOSMM" target="_blank">
+                Zur RC 2 Schutzfolie (Amazon)
+              </a>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-title">Sonnenschutz für DJI RC 2 Fernsteuerung</div>
+            <div class="item-note">
+              Erleichtert das Ablesen des Displays bei starkem Sonnenlicht.  
+              Bitte nur diesen Link verwenden.
+            </div>
+            <div class="item-link">
+              <a href="https://amzn.to/4nSb1Su" target="_blank">
+                Zum RC 2 Sonnenschutz (Amazon)
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="item">
-      <div class="item-title">Sonnenschutz für DJI RC 2 Fernsteuerung</div>
-      <div class="item-note">
-        Erleichtert Sicht auf das Display bei starkem Sonnenlicht.
+    <!-- ACCORDION: FPV & Goggles -->
+    <div class="accordion-group">
+      <div class="accordion-header">
+        <div class="accordion-title">FPV & Goggles</div>
+        <button class="accordion-button" aria-expanded="true">
+          <span>auf/zu</span>
+          <span class="accordion-icon">▶</span>
+        </button>
       </div>
-      <div class="item-link">
-        <a href="https://amzn.to/4nSb1Su" target="_blank">Zum RC 2 Sonnenschutz (Amazon)</a>
+      <div class="accordion-content">
+        <div class="accordion-content-inner">
+          <div class="item">
+            <div class="item-title">DJI Goggles 3 – FPV-Brille</div>
+            <div class="item-note">
+              Für ein immersives Fluggefühl – man sieht direkt das Bild der Drohne.  
+              Hilft, die Flugbahn präziser einzuschätzen & kreative Aufnahmen zu machen.  
+              Bitte genau dieses Modell verwenden.
+            </div>
+            <div class="item-link">
+              <a href="https://share.google/QQhYGK2bjUOEyIFz3" target="_blank">
+                DJI Goggles 3 (DJI Store)
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -266,5 +414,31 @@ Ihr braucht mir kein Geld dazugeben.
     damit ihr einen guten Überblick habt ❤️
   </footer>
 
+  <script>
+    // Accordion-Logik
+    document.querySelectorAll('.accordion-group').forEach(function(group) {
+      const header = group.querySelector('.accordion-header');
+      const button = group.querySelector('.accordion-button');
+      const content = group.querySelector('.accordion-content');
+
+      // Startzustand: offen
+      content.style.maxHeight = content.scrollHeight + 'px';
+      content.classList.add('open');
+      button.setAttribute('aria-expanded', 'true');
+
+      header.addEventListener('click', function() {
+        const isOpen = content.classList.contains('open');
+        if (isOpen) {
+          content.classList.remove('open');
+          content.style.maxHeight = 0;
+          button.setAttribute('aria-expanded', 'false');
+        } else {
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          button.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
