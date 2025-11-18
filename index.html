@@ -117,7 +117,7 @@
       text-align: center;
       font-size: 0.8rem;
       color: #6b7280;
-      padding-bottom: 1rem;
+      padding-bottom: 1.5rem;
     }
 
     /* ---------- ACCORDION STYLES ---------- */
@@ -217,25 +217,36 @@
       Falls ihr trotzdem etwas Kleines schenken möchtet:
     </p>
 
-Wireless Charger Duo EP-P5400 dark-gray | Samsung DE https://share.google/c1vZqrZtJbL622sch
-
+    <!-- Wireless Charger als Item -->
     <div class="item">
-      <div class="item-title">Festplatte für meinen PC hdd am besten aber ssd mindestens 1 Terabyte</div>
+      <div class="item-title">Wireless Charger Duo EP-P5400 (dark gray)</div>
       <div class="item-note">
-        Robust & stoßfest, damit das Handy lange heil bleibt.
+        Praktische Ladestation, mit der ich Handy und z.&nbsp;B. Kopfhörer gleichzeitig laden kann.
       </div>
       <div class="item-link">
-        <a href="#" target="_blank">Link zum Produkt (Platzhalter)</a>
+        <a href="https://share.google/c1vZqrZtJbL622sch" target="_blank">
+          Zum Produkt (Samsung)
+        </a>
       </div>
     </div>
 
     <div class="item">
-      <div class="item-title">Chatgbt Plus Abo</div>
+      <div class="item-title">Festplatte für meinen PC (mind. 1&nbsp;TB)</div>
       <div class="item-note">
-        Ich arbeite sehr viel damit. Bitte
+        Interne oder externe HDD/SSD mit mindestens 1&nbsp;TB Speicher für Games, Projekte & Backups.
       </div>
       <div class="item-link">
-        <a href="#" target="_blank">Link zum Produkt (Platzhalter)</a>
+        <a href="#" target="_blank">Link zum Produkt (Platzhalter – bitte noch ergänzen)</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">ChatGPT Plus Abo</div>
+      <div class="item-note">
+        Nutze ich täglich für Schule, Projekte & Programmieren – wäre mega hilfreich.
+      </div>
+      <div class="item-link">
+        <a href="#" target="_blank">Info-Link (Platzhalter – Abo kann z.&nbsp;B. direkt bei ChatGPT abgeschlossen werden)</a>
       </div>
     </div>
 
@@ -383,3 +394,49 @@ Wireless Charger Duo EP-P5400 dark-gray | Samsung DE https://share.google/c1vZqr
               Hilft, die Flugbahn präziser einzuschätzen & kreative Aufnahmen zu machen.  
               Bitte genau dieses Modell verwenden.
             </div>
+            <div class="item-link">
+              <a href="#" target="_blank">
+                Link zum Produkt (Platzhalter – bitte noch ergänzen)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    Erstellt von Niklas – diese Liste darf gerne weitergegeben werden 😊
+  </footer>
+
+  <!-- Accordion JavaScript -->
+  <script>
+    document.querySelectorAll('.accordion-group').forEach((group) => {
+      const header = group.querySelector('.accordion-header');
+      const button = group.querySelector('.accordion-button');
+      const content = group.querySelector('.accordion-content');
+
+      // Startzustand: Falls aria-expanded="true" gesetzt ist → aufklappen
+      if (button.getAttribute('aria-expanded') === 'true') {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      }
+
+      header.addEventListener('click', () => {
+        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+        // aria-expanded umschalten (für Screenreader / Icon-Animation)
+        button.setAttribute('aria-expanded', String(!isExpanded));
+
+        if (!isExpanded) {
+          // aufklappen
+          content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+          // zuklappen
+          content.style.maxHeight = null;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
