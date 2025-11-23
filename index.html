@@ -66,7 +66,6 @@
       transition: transform 0.2s ease, box-shadow 0.25s ease;
     }
 
-    /* Hover Effekt + Glow */
     .item:hover {
       transform: translateY(-4px);
       box-shadow:
@@ -86,7 +85,6 @@
       margin-bottom: 0.25rem;
     }
 
-    /* Link Animation */
     .item-link a {
       font-size: 0.85rem;
       text-decoration: none;
@@ -98,10 +96,10 @@
 
     .item-link a:hover {
       transform: scale(1.06);
-      color: #5fd4ff;
+      color: #7dd3fc;
+      text-shadow: 0 0 6px rgba(56,189,248,0.4);
     }
 
-    /* Fade-in Animation */
     @keyframes fadeInSmooth {
       from {
         opacity: 0;
@@ -117,7 +115,7 @@
       text-align: center;
       font-size: 0.8rem;
       color: #6b7280;
-      padding-bottom: 1.5rem;
+      padding-bottom: 2rem;
     }
 
     /* ---------- ACCORDION STYLES ---------- */
@@ -137,6 +135,11 @@
       justify-content: space-between;
       cursor: pointer;
       user-select: none;
+      transition: background 0.2s ease;
+    }
+
+    .accordion-header:hover {
+      background: #0f172a;
     }
 
     .accordion-title {
@@ -169,7 +172,7 @@
     .accordion-content {
       max-height: 0;
       overflow: hidden;
-      transition: max-height 0.25s ease;
+      transition: max-height 0.35s ease, padding 0.25s ease;
       padding: 0 0.9rem;
     }
 
@@ -179,6 +182,28 @@
 
     .accordion-content-inner .item:first-child {
       margin-top: 0.7rem;
+    }
+
+    /* Back-to-Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #38bdf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 50%;
+      padding: 0.6rem;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(56,189,248,0.3);
+      transition: all 0.2s ease;
+      display: none;
+      z-index: 100;
+    }
+
+    #backToTop:hover {
+      transform: scale(1.1);
     }
   </style>
 </head>
@@ -191,40 +216,36 @@
     </p>
   </header>
 
-  <!-- WICHTIGER HINWEIS -->
   <p class="rules">
-    <strong>Wichtig:</strong> Bitte bei allen Wünschen ausschließlich den angegebenen Link benutzen.
-    Besonders bei Drohnen-Akkus, ND-Filtern und Zubehör ist es wichtig, dass es genau das richtige
+    <strong>Wichtig:</strong> Bitte bei allen Wünschen ausschließlich den angegebenen Link benutzen.  
+    Besonders bei Drohnen-Akkus, ND-Filtern und Zubehör ist es wichtig, dass es genau das richtige  
     Modell ist. Bitte keine ähnlichen Produkte oder Alternativen – dann passt alles sicher. ❤️
   </p>
 
-  <!-- INFO AN ELTERN -->
   <p class="rules" style="background:#0f1a2e; border-color:#243454; margin-top:0.5rem;">
     <strong>Kleine Info an euch 😊:</strong><br>
-    Mir ist bewusst, dass manche Sachen auf der Liste ziemlich teuer sind.  
-    Ich erwarte sie natürlich nicht und freue mich genauso über alles, von dem ihr denkt,  
+    Mir ist bewusst, dass manche Sachen auf der Liste ziemlich teuer sind.    
+    Ich erwarte sie natürlich nicht und freue mich genauso über alles, von dem ihr denkt,    
     dass es sich lohnt und gut zu mir passt. ❤️
   </p>
 
   <main>
 
-    <!-- HANDY -->
     <h2 class="section-title">Für mein Handy 📱</h2>
 
     <p class="item-note" style="margin-bottom: 1rem;">
-      Mein Handy (S25 Ultra) habe ich mir selbst gekauft und mir selbst geleistet –
+      Mein Handy (S25 Ultra) habe ich mir selbst gekauft und mir selbst geleistet –  
       ihr müsst mir dazu nichts schenken 😊<br>
       Falls ihr trotzdem etwas Kleines schenken möchtet:
     </p>
 
-    <!-- Wireless Charger als Item -->
     <div class="item">
       <div class="item-title">Wireless Charger Duo EP-P5400 (dark gray)</div>
       <div class="item-note">
         Praktische Ladestation, mit der ich Handy und z.&nbsp;B. Kopfhörer gleichzeitig laden kann.
       </div>
       <div class="item-link">
-        <a href="https://share.google/c1vZqrZtJbL622sch" target="_blank">
+        <a href="https://share.google/c1vZqrZtJbL622sch" target="_blank" rel="noopener noreferrer">
           Zum Produkt (Samsung)
         </a>
       </div>
@@ -236,27 +257,51 @@
         Interne oder externe HDD/SSD mit mindestens 1&nbsp;TB Speicher für Games, Projekte & Backups.
       </div>
       <div class="item-link">
-        <a href="#" target="_blank">Link zum Produkt (Platzhalter – bitte noch ergänzen)</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Link zum Produkt (Platzhalter – bitte noch ergänzen)</a>
       </div>
     </div>
 
     <div class="item">
       <div class="item-title">ChatGPT Plus Abo</div>
       <div class="item-note">
-        Nutze ich täglich für Schule, Projekte & Programmieren – wäre mega hilfreich. Und hab damit Mathe und Englisch gelernt und beides note 2 bekommen
+        Nutze ich täglich für Schule, Projekte & Programmieren – wäre mega hilfreich.  
+        Und hab damit Mathe und Englisch gelernt und beides Note 2 bekommen.
       </div>
       <div class="item-link">
-        <a href="#" target="_blank">Info-Link (Platzhalter – Abo kann z.&nbsp;B. direkt bei ChatGPT abgeschlossen werden)</a>
+        <a href="#" target="_blank" rel="noopener noreferrer">Info-Link (Platzhalter – Abo kann direkt bei ChatGPT abgeschlossen werden)</a>
       </div>
     </div>
 
-    <!-- DJI MINI 4 PRO -->
     <h2 class="section-title">Für meine DJI Mini 4 Pro 🚁</h2>
 
-https://amzn.eu/d/1q1oYgp Koffer nur nd filter muss orginal sein
-https://amzn.eu/d/1KMSCot  RC 2
+    <!-- NEUE ITEMS -->
+    <div class="item">
+      <div class="item-title">Transportkoffer für DJI Mini 4 Pro</div>
+      <div class="item-note">
+        Robuster Schutzkoffer – bitte nur diesen Link verwenden.  
+        <br>ND-Filter bitte separat direkt bei <strong>DJI</strong> auf der offiziellen Webseite kaufen,  
+        damit sie original sind und nicht von Drittanbietern stammen.
+      </div>
+      <div class="item-link">
+        <a href="https://amzn.eu/d/1q1oYgp" target="_blank" rel="noopener noreferrer">
+          Zum Koffer (Amazon)
+        </a>
+      </div>
+    </div>
 
-    <!-- ACCORDION: Filter & Bild -->
+    <div class="item">
+      <div class="item-title">DJI RC 2 Fernsteuerung</div>
+      <div class="item-note">
+        Ersatz- bzw. Zweit-Controller, falls mal ein anderer genutzt werden soll.
+      </div>
+      <div class="item-link">
+        <a href="https://amzn.eu/d/1KMSCot" target="_blank" rel="noopener noreferrer">
+          Zur RC 2 (Amazon)
+        </a>
+      </div>
+    </div>
+
+    <!-- ACCORDIONS -->
     <div class="accordion-group">
       <div class="accordion-header">
         <div class="accordion-title">Filter & Bildqualität</div>
@@ -273,7 +318,7 @@ https://amzn.eu/d/1KMSCot  RC 2
               Bitte genau diesen Link verwenden – perfekte Passform & Qualität für die Mini 4 Pro.
             </div>
             <div class="item-link">
-              <a href="https://amzn.to/4nqQKn8" target="_blank">
+              <a href="https://amzn.to/4nqQKn8" target="_blank" rel="noopener noreferrer">
                 Zum ND-Filter Set (Amazon)
               </a>
             </div>
@@ -282,7 +327,6 @@ https://amzn.eu/d/1KMSCot  RC 2
       </div>
     </div>
 
-    <!-- ACCORDION: Akkus & Laden -->
     <div class="accordion-group">
       <div class="accordion-header">
         <div class="accordion-title">Akkus & Laden</div>
@@ -300,7 +344,7 @@ https://amzn.eu/d/1KMSCot  RC 2
               Funktioniert problemlos – der Plus-Akku ist aber leistungsstärker.
             </div>
             <div class="item-link">
-              <a href="https://amzn.to/4pMR6WQ" target="_blank">
+              <a href="https://amzn.to/4pMR6WQ" target="_blank" rel="noopener noreferrer">
                 Zum Standardakku (Amazon)
               </a>
             </div>
@@ -315,7 +359,7 @@ https://amzn.eu/d/1KMSCot  RC 2
             </div>
             <div class="item-link">
               <a href="https://drohnen-shop.de/products/intelligent-flight-battery-plus-fur-dji-mini-3-4-pro-langere-flugzeit"
-                 target="_blank">
+                 target="_blank" rel="noopener noreferrer">
                 Zum Plus-Akku (Drohnen-Shop)
               </a>
             </div>
@@ -325,7 +369,7 @@ https://amzn.eu/d/1KMSCot  RC 2
             <div class="item-title">DJI Two-Way Charging Hub (offiziell)</div>
             <div class="item-note">
               Offizielle DJI Ladestation für bis zu 3 Akkus.  
-              100% kompatibel mit der DJI Mini 4 Pro, lädt Akkus nacheinander
+              100% kompatibel mit der DJI Mini 4 Pro, lädt Akkus nacheinander  
               und kann auch als Powerbank genutzt werden.  
               Bitte nur diesen Link verwenden – Originalprodukt.
             </div>
@@ -340,7 +384,6 @@ https://amzn.eu/d/1KMSCot  RC 2
       </div>
     </div>
 
-    <!-- ACCORDION: Fernsteuerung & Zubehör -->
     <div class="accordion-group">
       <div class="accordion-header">
         <div class="accordion-title">Fernsteuerung & Zubehör</div>
@@ -357,7 +400,7 @@ https://amzn.eu/d/1KMSCot  RC 2
               Schützt das Display der Fernsteuerung vor Kratzern & Fingerabdrücken.
             </div>
             <div class="item-link">
-              <a href="https://amzn.to/46XOSMM" target="_blank">
+              <a href="https://amzn.to/46XOSMM" target="_blank" rel="noopener noreferrer">
                 Zur RC 2 Schutzfolie (Amazon)
               </a>
             </div>
@@ -370,7 +413,7 @@ https://amzn.eu/d/1KMSCot  RC 2
               Bitte nur diesen Link verwenden.
             </div>
             <div class="item-link">
-              <a href="https://amzn.to/4nSb1Su" target="_blank">
+              <a href="https://amzn.to/4nSb1Su" target="_blank" rel="noopener noreferrer">
                 Zum RC 2 Sonnenschutz (Amazon)
               </a>
             </div>
@@ -379,7 +422,6 @@ https://amzn.eu/d/1KMSCot  RC 2
       </div>
     </div>
 
-    <!-- ACCORDION: FPV & Goggles -->
     <div class="accordion-group">
       <div class="accordion-header">
         <div class="accordion-title">FPV & Goggles</div>
@@ -398,7 +440,7 @@ https://amzn.eu/d/1KMSCot  RC 2
               Bitte genau dieses Modell verwenden.
             </div>
             <div class="item-link">
-              <a href="#" target="_blank">
+              <a href="#" target="_blank" rel="noopener noreferrer">
                 Link zum Produkt (Platzhalter – bitte noch ergänzen)
               </a>
             </div>
@@ -413,33 +455,39 @@ https://amzn.eu/d/1KMSCot  RC 2
     Erstellt von Niklas – diese Liste darf gerne weitergegeben werden 😊
   </footer>
 
-  <!-- Accordion JavaScript -->
+  <button id="backToTop">↑</button>
+
   <script>
+    // Accordion Funktion
     document.querySelectorAll('.accordion-group').forEach((group) => {
       const header = group.querySelector('.accordion-header');
       const button = group.querySelector('.accordion-button');
       const content = group.querySelector('.accordion-content');
 
-      // Startzustand: Falls aria-expanded="true" gesetzt ist → aufklappen
       if (button.getAttribute('aria-expanded') === 'true') {
         content.style.maxHeight = content.scrollHeight + 'px';
       }
 
       header.addEventListener('click', () => {
         const isExpanded = button.getAttribute('aria-expanded') === 'true';
-
-        // aria-expanded umschalten (für Screenreader / Icon-Animation)
         button.setAttribute('aria-expanded', String(!isExpanded));
 
         if (!isExpanded) {
-          // aufklappen
           content.style.maxHeight = content.scrollHeight + 'px';
         } else {
-          // zuklappen
           content.style.maxHeight = null;
         }
       });
     });
+
+    // Back-to-Top Funktion
+    const btn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   </script>
 </body>
-</html>
+</html
