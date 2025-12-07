@@ -49,15 +49,14 @@
     }
 
     .section-title {
-      margin: 2.5rem 0 0.5rem; /* Etwas mehr Abstand nach oben für neue Sektionen */
+      margin: 2.5rem 0 0.5rem;
       font-size: 1.4rem;
       font-weight: 700;
-      border-bottom: 2px solid #38bdf8; /* Blaue Linie zur Trennung */
+      border-bottom: 2px solid #38bdf8;
       padding-bottom: 0.5rem;
       color: #f0f9ff;
     }
 
-    /* --- ITEM CARD --- */
     .item {
       background: #111827;
       border-radius: 0.75rem;
@@ -103,14 +102,8 @@
     }
 
     @keyframes fadeInSmooth {
-      from {
-        opacity: 0;
-        transform: translateY(8px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     footer {
@@ -120,8 +113,7 @@
       padding-bottom: 2rem;
     }
 
-    /* ---------- ACCORDION STYLES ---------- */
-
+    /* Accordion Styles */
     .accordion-group {
       margin: 0.6rem 0 1rem;
       border-radius: 0.75rem;
@@ -140,15 +132,9 @@
       transition: background 0.2s ease;
     }
 
-    .accordion-header:hover {
-      background: #0f172a;
-    }
+    .accordion-header:hover { background: #0f172a; }
 
-    .accordion-title {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: #e5e7eb;
-    }
+    .accordion-title { font-size: 0.95rem; font-weight: 600; color: #e5e7eb; }
 
     .accordion-button {
       background: none;
@@ -162,14 +148,8 @@
       padding: 0;
     }
 
-    .accordion-icon {
-      display: inline-block;
-      transition: transform 0.2s ease;
-    }
-
-    .accordion-button[aria-expanded="true"] .accordion-icon {
-      transform: rotate(90deg);
-    }
+    .accordion-icon { display: inline-block; transition: transform 0.2s ease; }
+    .accordion-button[aria-expanded="true"] .accordion-icon { transform: rotate(90deg); }
 
     .accordion-content {
       max-height: 0;
@@ -178,15 +158,9 @@
       padding: 0 0.9rem;
     }
 
-    .accordion-content-inner {
-      padding-bottom: 0.7rem;
-    }
+    .accordion-content-inner { padding-bottom: 0.7rem; }
+    .accordion-content-inner .item:first-child { margin-top: 0.7rem; }
 
-    .accordion-content-inner .item:first-child {
-      margin-top: 0.7rem;
-    }
-
-    /* Back-to-Top Button */
     #backToTop {
       position: fixed;
       bottom: 20px;
@@ -198,15 +172,12 @@
       padding: 0.6rem;
       font-size: 1.2rem;
       cursor: pointer;
-      box-shadow: 0 0 12px rgba(56,189,248,0.3);
-      transition: all 0.2s ease;
       display: none;
       z-index: 100;
+      box-shadow: 0 0 12px rgba(56,189,248,0.3);
+      transition: all 0.2s ease;
     }
-
-    #backToTop:hover {
-      transform: scale(1.1);
-    }
+    #backToTop:hover { transform: scale(1.1); }
   </style>
 </head>
 
@@ -425,6 +396,33 @@
     <h2 class="section-title">FPV Drohnen & Equipment 🏁</h2>
 
     <div class="item">
+      <div class="item-title">Steam Gutscheinkarte (20 €)</div>
+      <div class="item-note">
+        Für den Simulator <strong>"Uncrashed"</strong>. <br>
+        Damit kann ich am PC sicher FPV-Fliegen lernen, bevor ich mit der echten Drohne starte. 
+        Gibt es an der Tankstelle, im Supermarkt oder direkt online.
+      </div>
+      <div class="item-link">
+        <a href="https://store.steampowered.com/digitalgiftcards/selectgiftcard" target="_blank" rel="noopener noreferrer">
+          Steam Guthaben (Online kaufen)
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-title">DJI FPV Remote Controller 3</div>
+      <div class="item-note">
+        Wichtig, um FPV richtig zu lernen und später die Drohne präzise zu steuern. 
+        Kompatibel mit Goggles 3.
+      </div>
+      <div class="item-link">
+        <a href="https://store.dji.com/de/product/dji-fpv-remote-controller-3?vid=164841" target="_blank" rel="noopener noreferrer">
+          Zum Controller (DJI Store)
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
       <div class="item-title">DJI Goggles 3 – FPV-Brille</div>
       <div class="item-note">
         Für ein immersives Fluggefühl – man sieht direkt das Bild der Drohne.  
@@ -442,23 +440,11 @@
     <div class="item">
       <div class="item-title">FPV Drohne (z.B. DJI Avata 2)</div>
       <div class="item-note">
-        Platzhalter für die eigentliche Drohne. Wenn du eine selbst bauen willst, schreib hier die Teile rein (Frame, Stack, Motoren).
+        Platzhalter für die eigentliche Drohne.
       </div>
       <div class="item-link">
         <a href="#" target="_blank" rel="noopener noreferrer">
           Link zur Drohne
-        </a>
-      </div>
-    </div>
-
-    <div class="item">
-      <div class="item-title">DJI RC Motion 3 Controller</div>
-      <div class="item-note">
-        Steuerknüppel für intuitive Steuerung mit der Handbewegung (passt zur Goggles 3).
-      </div>
-      <div class="item-link">
-        <a href="#" target="_blank" rel="noopener noreferrer">
-          Link zum Controller
         </a>
       </div>
     </div>
